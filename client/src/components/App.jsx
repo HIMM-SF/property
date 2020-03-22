@@ -17,39 +17,46 @@ import Carousel from './Carousel.jsx';
 const Wrapper = styled.div`
   display: flex;
   margin: 0px 200px 0px 190px;
-  padding: 0px 24px 0px 24px;
+  overflow-wrap: break-word;
+  padding: 0px 22px 0px 24px;
+  line-height: 1.375em;
   height: 100%;
   color: #484848;
+  letter-spacing: white;
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 `;
 
 const MainBodyLeft = styled.div`
   width: 600px;
+  
 `;
 
 const Heading = styled.div`
   display: flex;
   height: 180px;
-  color: #484848;
-  padding: 0px 0px 0px 0px;
-`;
-
-const Highlights = styled.div`
-  color: #484848;
-  padding: 30px 0px 0px 0px;
+  padding: 10px 30px 0px 0px;
+  position: relative;
+  border-bottom: 1px solid #e4e4e4;
   
 `;
 
-const ImageBody = styled.div`
-  color: #484848;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 201px;
+const Highlights = styled.div`
+  height: auto;
+  position: relative;
+  padding: 10px 40px 0px 0px;
+  margin-bottom: 30px;
 `;
+
+
+
 const ShowAll = styled.h3`
   cursor: pointer;
-  text-decoration:underline;
+  color: #008489;
+  font-weight: 400;
+  font-size: 16px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 class App extends React.Component {
@@ -88,47 +95,46 @@ class App extends React.Component {
         this.setState({logIn: false})
     };
 
-    get() {
-        axios.get('/api/rooms')
+    get(rooms, id) {
+        axios.get('/api/rooms/', { params: { id: id } })
           .then((result) => {
             //   for(var i = 0; i < result.data.length; i++) {
             //       console.log(result.data[i].title)
             //   }
-              //console.log(result.data)
+              //console.log(result.data[0])
+
+              //console.log(result.data[13].highlight[0])
               this.setState({rooms: result.data});
           })
           .catch((err) => console.log(err));
     }
 
     render() {
+      const randomIndex = Math.floor(Math.random() * 15)
+      console.log(randomIndex)
         return (
             <div>
                 <Wrapper>
                     <MainBodyLeft>
                         <Heading>
-                        <Header room={this.state.rooms[0]} />
+                        <Header room={this.state.rooms[randomIndex]} />
                         {/* <Image /> */}
                         </Heading>
                         <Highlights>
-                        <Highlight room={this.state.rooms[0]} />
+                        <Highlight room={this.state.rooms[randomIndex]} />
                         </Highlights>
-                        <Body room={this.state.rooms[0]} />
+                        <Body room={this.state.rooms[randomIndex]} />
                         <ShowAll onClick={this.openLogIn}>Contact host</ShowAll>
                         <Contact logged={this.state.logIn} closeLogIn={this.closeLogIn}>Contact host</Contact>
-                        <Amenity room={this.state.rooms[0]} />
+                        <Amenity room={this.state.rooms[randomIndex]} />
                         <ShowAll onClick={this.openModal}>Show All 10 Amenities</ShowAll>
                         <Map />
                     </MainBodyLeft>
                 </Wrapper> 
-                <Modal room={this.state.rooms[0]} show={this.state.showModal} closeModal={this.closeModal} />
+                <Modal room={this.state.rooms[randomIndex]} show={this.state.showModal} closeModal={this.closeModal} />
                 
                 <Carousel />
             </div>
-                
-            
-
-            
-
         )
     }
 }

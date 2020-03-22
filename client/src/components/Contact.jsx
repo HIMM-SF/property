@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     z-index: 1;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.8);
 `;
 
 const Box = styled.div`
@@ -23,10 +23,10 @@ const Box = styled.div`
     position: relative;
     bottom: 0;
     margin: auto;
-    top: 100px;
-    left: 450px;
+    top: 40px;
+    left: 400px;
     right: 0px;
-    width: 500px;
+    width: 650px;
     box-shadow: 1px 1px 20px 1px rgba(15,15,15,0.2);
 
     background-color: white;
@@ -80,6 +80,7 @@ class Contact extends React.Component {
                          {this.state.page === 0    ?
                            <div>
                                <Button onClick={this.props.closeLogIn}> X </Button> 
+                               <div>Log In</div>
                                <form>
                                     <label>
                                         Country/Region:

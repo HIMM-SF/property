@@ -1,25 +1,71 @@
 import React from 'react';
+import styled from 'styled-components';
 
 
-const Icon = styled
+
+const Container = styled.div`
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   padding: 10px 25px 0 0;
+   border-bottom: 1px solid #e4e4e4;
+
+`;
+
+const Item = styled.div`
+   display: flex;
+   padding: 10px 20px 0 0;
+   div:nth-child(1) {
+       flex: 0.7;
+   }
+   div:nth-child(2) {
+        font-size: 17px;
+        flex: 10;
+        display: flex;
+        flex-direction: column;
+        div:nth-child(1) {
+            font-weight: 500;
+            padding-bottom: 3px;
+        }
+        div:nth-child(2) {
+            font-weight: 340;
+            padding-bottom: 3px;
+        }
+    }
+`;
 
 // for test
 const Highlight = props => (
-    <div>
-        <img style={{ maxWidth: "20px", maxHeight: "20px"}} src="1.jpg"></img>
-        <img style={{ maxWidth: "20px", maxHeight: "20px"}} src="2.jpg"></img>
-        <img style={{ maxWidth: "20px", maxHeight: "20px"}} src="3.jpg"></img>
-        <img style={{ maxWidth: "20px", maxHeight: "20px"}} src="4.jpg"></img>
-        <div>{props.room ? props.room.highlight[0].characteristic : null }</div>
-        <div>{props.room ? props.room.highlight[0].description : null }</div>
-        <div>{props.room ? props.room.highlight[1].characteristic : null }</div>
-        <div>{props.room ? props.room.highlight[1].description : null }</div>
-        <div>{props.room ? props.room.highlight[2].characteristic : null }</div>
-        <div>{props.room ? props.room.highlight[2].description : null }</div>
-        <div>{props.room ? props.room.highlight[3].characteristic : null }</div>
-        <div>{props.room ? props.room.highlight[3].description : null }</div>
-        {/* {console.log(props.room ? props.room.highlight[0].characteristic : null )} */}
-    </div>
+    <Container>
+        <Item>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="1.jpg"></img></div>
+            <div>
+                <div>{props.room ? props.room.highlight[0].characteristic : null }</div>
+                <div>{props.room ? props.room.highlight[0].description : null }</div>
+            </div>
+        </Item>
+        <Item>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="2.jpg"></img></div>
+            <div>
+                <div>{props.room ? props.room.highlight[1].characteristic : null }</div>
+                <div>{props.room ? props.room.highlight[1].description : null }</div>
+            </div>
+        </Item>
+        <Item>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="3.jpg"></img></div>
+            <div>
+                <div>{props.room ? props.room.highlight[2].characteristic : null }</div>
+                <div>{props.room ? props.room.highlight[2].description : null }</div>
+            </div>
+        </Item>
+        <Item>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="4.jpg"></img></div>
+            <div>
+                <div>{props.room ? props.room.highlight[3].characteristic : null }</div>
+                <div>{props.room ? props.room.highlight[3].description : null }</div>
+            </div>
+        </Item>
+    </Container>
 )
 
 export default Highlight;

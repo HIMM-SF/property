@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     z-index: 1;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.8);
 `;
 
 const Box = styled.div`
@@ -23,12 +23,18 @@ const Box = styled.div`
     margin: auto;
     top: 100px;
     left: 450px;
-    right: 0px;
+    right: 0px;  
+    line-height: 1.375em;
+    height: 100%;
+    color: #484848;
     width: 500px;
     box-shadow: 1px 1px 20px 1px rgba(15,15,15,0.2);
-
+    padding: 30px;
     background-color: white;
     font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+    div {
+        padding: 7px;
+    }
 `;
 
 // const Title = styled.div`

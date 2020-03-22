@@ -2,37 +2,83 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
-    height: 200px;
+    height: 300px;
     position: relative;
-    bottom: px;
+    float: left;
     top: 10px;
     left: 0px;
     right: 0px;
-    width: 600px;
-    border-bottom: 1px solid #e4e4e4;
-    font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+    width: 500px;
+    text-size-adjust:100%;
+    overflow-wrap:break-word;
+    div:nth-child(1) {
+      overflow-wrap: break-word;
+      font-size: 32px;
+      letter-spacing: wide;
+      font-weight: 620;
+      padding-top: 20pm;
+      padding-bottom: 10px;
+      rgb(72, 72, 72);
+    }
+    div:nth-child(2) {
+      font-size: 17px;
+      font-weight: 400;
+      padding-top: 8pm;
+      padding-bottom: 30px;
+      line-height: 1.275em;
+      rgb(72, 72, 72);
+    }
 `;
 
-const Title = styled.h1`
-   font-size: 32px;
-   font-weight: 670;
-   line-height: 1.125em;
-   margin: 0px;
-   padding-top: 6pm;
-   padding-bottom: 6px;
-   rgb(72, 72, 72);
-`;
-
-const Local = styled.h4`
-   font-size: 16px;
+const Spec = styled.div`
+   padding-bottom: 20px;
+   position: relative;
+   font-size: 17px;
    font-weight: 400;
    line-height: 1.275em;
-   margin: 0px;
-   padding-top: 0;
-   rgb(72, 72, 72)
+   box-sizing:border-box;
+   -webkit-font-smoothing:antialiased;
+   text-size-adjust:100%;
+   span:nth-child(1) {
+     padding-right: 15px;
+   }
+   span:nth-child(2) {
+    padding-right: 15px;
+  }
+  span:nth-child(3) {
+    padding-right: 15px;
+  }
+  span:nth-child(4) {
+    padding-right: 15px;
+  }
+
 `;
 
+const Wrapper = styled.div`
+   position: relative;
+   float: right;
+   height: 10%;
+   left: 20%;
+   display: flex;
+   justify-content: flex-end;
+   flex-direction: column;
+   
+   div:nth-child(1) {
+    flex: 5;
+    display: flex;
+    vertical-align: middle
+    flex-direction: column;
+    margin-top: 2px;
 
+  }
+  div:nth-child(2) {
+     flex: 5;
+     display: flex;
+     flex-direction: column;
+     text-align:center;
+ }
+
+`;
 
 class Header extends React.Component {
   constructor(props) {
@@ -42,19 +88,24 @@ class Header extends React.Component {
   render() {
     return (
       <Box>
-          <Title>{this.props.room ? this.props.room.title : null}</Title>
-        {/* {console.log(props.room ? props.room.title : null)} */}
-        <img
-            style={{ height: "90px", width: "90px", borderRadius: "50%",  float: "right" }}
-            src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/IMG_3372.jpg"
-        />
-        <Local>
-          <a href="#location">{this.props.room ? this.props.room.city : null}</a>
-          <div>{this.props.room ? this.props.room.userName : null}</div>
-          <div>{this.props.room ? this.props.room.numberOfMaxGuest : null} guests  {this.props.room ? this.props.room.numberOfBedrooms : null} bedrooms    {this.props.room ? this.props.room.numberOfBeds : null} beds  {this.props.room ? this.props.room.numberOfBaths : null} baths </div>
-        
-        </Local>
+        <div>{this.props.room ? this.props.room.title : null}</div>
+        <div><a href="#location">{this.props.room ? this.props.room.city : null}</a></div>
+        <Wrapper>
+            <div><img style={{ height: "70px", width: "70px" }} src="cutepig.png"/></div>
+            <div>{this.props.room ? this.props.room.userName : null}</div>
+        </Wrapper>
+        <Spec>
+          <span>{this.props.room ? this.props.room.numberOfMaxGuest : null} guests  </span>
+          <span>{this.props.room ? this.props.room.numberOfBedrooms : null} bedrooms  </span>  
+          <span>{this.props.room ? this.props.room.numberOfBeds : null} beds  </span>
+          <span>{this.props.room ? this.props.room.numberOfBaths : null} baths </span>
+
+        </Spec>
+
       </Box>
+      
+        
+      
     )
   }
 }

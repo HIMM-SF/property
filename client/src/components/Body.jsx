@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const ReadHide = styled.h4`
   cursor: pointer;
+  color: #008489;
+  font-weight: 400;
+  font-size: 16px;
 `;
 
 class Body extends React.Component {
@@ -40,11 +43,11 @@ class Body extends React.Component {
                 { expandedDiv }
                 {this.state.expanded ? 
                 <div>
-                    <ReadHide onClick={this.handleClick}>Hide</ReadHide>
+                    <ReadHide onClick={this.handleClick}>Hide<img style={{ paddingTop: "15px", marginLeft: "13px", maxWidth: "12px", maxHeight: "12px", rotate: "180deg"}} src="arrowDown.svg"/></ReadHide>
                 </div>
                 :  
                 <div>
-                    <span><ReadHide onClick={this.handleClick}>Read more about the space<img style={{ paddingTop: "15px", marginLeft: "13px", maxWidth: "15px", maxHeight: "15px"}} src="arrowDown.svg"/></ReadHide></span>
+                    <span><ReadHide onClick={this.handleClick}>Read more about the space<img style={{ paddingTop: "15px", marginLeft: "13px", maxWidth: "10px", maxHeight: "10px"}} src="arrowDown.svg"/></ReadHide></span>
                 </div>
                 }
            </div>
