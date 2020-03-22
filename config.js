@@ -1,0 +1,10 @@
+// export S3_BUCKET="userimagexxia10296";
+// export AWS_ACCESS_KEY_ID="AKIAJ2FHTF4WOJGEILEQ";
+// export AWS_SECRET_ACCESS_KEY="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";
+
+
+module.exports ={
+    S3_BUCKET : "userimagexxia10296",
+    AWS_ACCESS_KEY_ID : "AKIAJ2FHTF4WOJGEILEQ", 
+    AWS_SECRET_ACCESS_KEY : "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",
+};
