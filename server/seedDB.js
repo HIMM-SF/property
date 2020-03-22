@@ -4,7 +4,7 @@ const faker = require('faker');
 
 
 const profiles = [];
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 15; i++) {
     let highlight = [];
     // faker.random.number({min: 4})
     for (let i = 0; i < 4; i++) {

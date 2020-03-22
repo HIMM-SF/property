@@ -14,7 +14,16 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/api/rooms', function(req, res) {
+app.get('/api/rooms/:id', (req, res) => {
+  Room
+    .find({ _id: req.params.id })
+    .then(([ room ]) => {
+      res.json(room);
+    })
+    .catch(err => console.log(err));
+});
+
+app.get('/api/rooms/', function(req, res) {
   db.query((err, data) => {
     if (err) {
       console.log(err)
