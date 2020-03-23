@@ -7,14 +7,13 @@ const Container = styled.div`
    position: relative;
    display: flex;
    flex-direction: column;
-   padding: 10px 25px 0 0;
-   border-bottom: 1px solid #e4e4e4;
-
+   padding: 10px 10px 0 0;
+   margin-bottom: 33px;
 `;
 
 const Item = styled.div`
    display: flex;
-   padding: 10px 20px 0 0;
+   padding: 10px 10px 0 0;
    div:nth-child(1) {
        flex: 0.7;
    }
@@ -24,7 +23,7 @@ const Item = styled.div`
         display: flex;
         flex-direction: column;
         div:nth-child(1) {
-            font-weight: 500;
+            font-weight: 530;
             padding-bottom: 3px;
         }
         div:nth-child(2) {

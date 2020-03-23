@@ -39,15 +39,15 @@ class Body extends React.Component {
         var expandedDiv = this.readMore();
         return (
             <div>
-                <h3>The Space</h3>
+                <h3 id="body">The Space</h3>
                 { expandedDiv }
                 {this.state.expanded ? 
                 <div>
-                    <ReadHide onClick={this.handleClick}>Hide<img style={{ paddingTop: "15px", marginLeft: "13px", maxWidth: "12px", maxHeight: "12px", rotate: "180deg"}} src="arrowDown.svg"/></ReadHide>
+                    <span><ReadHide onClick={this.handleClick} href="#body">Hide<img style={{bottom: "50px", top: "55px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src="up.jpg"/></ReadHide></span>
                 </div>
                 :  
                 <div>
-                    <span><ReadHide onClick={this.handleClick}>Read more about the space<img style={{ paddingTop: "15px", marginLeft: "13px", maxWidth: "10px", maxHeight: "10px"}} src="arrowDown.svg"/></ReadHide></span>
+                    <span><ReadHide onClick={this.handleClick}>Read more about the space<img style={{ top: "75px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src="down.jpg"/></ReadHide></span>
                 </div>
                 }
            </div>

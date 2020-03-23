@@ -7,7 +7,7 @@ const Amen = styled.div`
    display: flex;
    position: relative;
    flex-direction: column;
-   padding: 10px 25px 16px 16px;
+   padding: 0px 25px 0px 0px;
 `;
 const Item = styled.div`
    display: flex;
@@ -15,31 +15,40 @@ const Item = styled.div`
    font-weight: 400;
 `;
 
+const ColumnFlex = styled.div`
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+`;
+
 class Amenity extends React.Component {
     constructor(props) {
         super(props);
     }
-
     render() {
         return (
             <Amen>
                 <div><h3>Amenities</h3></div>
-                <Item>
-                    <img style={{ maxWidth: "34px", maxHeight: "34px"}} src="iron.jpg"></img>
-                    <div>{this.props.room ? this.props.room.amen[0].title : null }</div>
-                </Item>
-                <Item>
-                    <img style={{ maxWidth: "34px", maxHeight: "34px"}} src="parking.jpg"></img>
-                    <div>{this.props.room ? this.props.room.amen[1].title : null }</div>
-                </Item>
-                <Item>
-                    <img style={{ maxWidth: "34px", maxHeight: "34px"}} src="wifi.jpg"></img>
-                    <div>{this.props.room ? this.props.room.amen[2].title : null }</div>
-                </Item>
-                <Item>
-                    <img style={{ maxWidth: "34px", maxHeight: "34px"}} src="dinning.jpg"></img>
-                    <div>{this.props.room ? this.props.room.amen[3].title : null }</div>
-                </Item>
+                <ColumnFlex>
+                    <Item>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="iron.jpg"></img>
+                        <div>{this.props.room ? this.props.room.amen[0].title : null }</div>
+                    </Item>
+                    <Item>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="parking.jpg"></img>
+                        <div>{this.props.room ? this.props.room.amen[1].title : null }</div>
+                    </Item>
+                </ColumnFlex>
+                <ColumnFlex>
+                    <Item>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="wifi.jpg"></img>
+                        <div>{this.props.room ? this.props.room.amen[2].title : null }</div>
+                    </Item>
+                    <Item>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="dinning.jpg"></img>
+                        <div>{this.props.room ? this.props.room.amen[3].title : null }</div>
+                    </Item>
+                </ColumnFlex>
                 {/* {console.log(props.room ? props.room.highlight[0].characteristic : null )} */}
             </Amen>
         )

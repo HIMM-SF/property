@@ -13,12 +13,16 @@ class Map extends React.Component {
 
   render() {
     return (
-      <Mapdiv id="location"> 
-          <img 
-              style={{ maxWidth: "600px", maxHeight: "600px", imageOrientation: "from-image" }}
-              src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/Screen+Shot+2020-03-18+at+2.01.15+PM.jpg"
-          />
-      </Mapdiv>
+
+      <div>
+        <Mapdiv id="location"> 
+           <h3>The neighborhood</h3>
+            <img 
+                style={{ maxWidth: "600px", maxHeight: "600px", imageOrientation: "from-image" }}
+                src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/Screen+Shot+2020-03-18+at+2.01.15+PM.jpg"
+            />
+        </Mapdiv>
+      </div>
     );
   }
 }

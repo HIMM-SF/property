@@ -21,8 +21,9 @@ const Wrapper = styled.div`
   padding: 0px 22px 0px 24px;
   line-height: 1.375em;
   height: 100%;
+  
   color: #484848;
-  letter-spacing: white;
+  letter-spacing: wide;
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 `;
 
@@ -33,21 +34,19 @@ const MainBodyLeft = styled.div`
 
 const Heading = styled.div`
   display: flex;
-  height: 180px;
-  padding: 10px 30px 0px 0px;
+  height: 160px;
+  padding: 10px 10px 0px 0px;
   position: relative;
   border-bottom: 1px solid #e4e4e4;
   
 `;
 
 const Highlights = styled.div`
-  height: auto;
+  //height: auto;
   position: relative;
-  padding: 10px 40px 0px 0px;
-  margin-bottom: 30px;
+  padding: 10px 10px 0px 0px;
+  border-bottom: 1px solid #e4e4e4;
 `;
-
-
 
 const ShowAll = styled.h3`
   cursor: pointer;

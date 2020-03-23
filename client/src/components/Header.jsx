@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
-    height: 300px;
+    height: 700px;
     position: relative;
     float: left;
     top: 10px;
     left: 0px;
     right: 0px;
-    width: 500px;
-    text-size-adjust:100%;
+    width: 400px;
+
     overflow-wrap:break-word;
     div:nth-child(1) {
       overflow-wrap: break-word;
@@ -24,14 +24,14 @@ const Box = styled.div`
       font-size: 17px;
       font-weight: 400;
       padding-top: 8pm;
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       line-height: 1.275em;
       rgb(72, 72, 72);
     }
 `;
 
 const Spec = styled.div`
-   padding-bottom: 20px;
+   padding-bottom: 10px;
    position: relative;
    font-size: 17px;
    font-weight: 400;
@@ -51,14 +51,15 @@ const Spec = styled.div`
   span:nth-child(4) {
     padding-right: 15px;
   }
-
 `;
 
 const Wrapper = styled.div`
+   top: 1px;
+   bottom: 1px;
+
    position: relative;
    float: right;
-   height: 10%;
-   left: 20%;
+   left: 25%;
    display: flex;
    justify-content: flex-end;
    flex-direction: column;
@@ -77,7 +78,11 @@ const Wrapper = styled.div`
      flex-direction: column;
      text-align:center;
  }
-
+`;
+ 
+const Front = styled.div`
+   width: 500px;
+   height: 100px;
 `;
 
 class Header extends React.Component {
@@ -88,12 +93,14 @@ class Header extends React.Component {
   render() {
     return (
       <Box>
-        <div>{this.props.room ? this.props.room.title : null}</div>
-        <div><a href="#location">{this.props.room ? this.props.room.city : null}</a></div>
-        <Wrapper>
-            <div><img style={{ height: "70px", width: "70px" }} src="cutepig.png"/></div>
-            <div>{this.props.room ? this.props.room.userName : null}</div>
-        </Wrapper>
+        <Front>
+            <div>{this.props.room ? this.props.room.title : null}</div>
+            <div><a href="#location">{this.props.room ? this.props.room.city : null}</a></div>
+            <Wrapper>
+                <div><img style={{ height: "70px", width: "70px" }} src="cutepig.png"/></div>
+                <div>{this.props.room ? this.props.room.userName : null}</div>
+            </Wrapper>
+        </Front>
         <Spec>
           <span>{this.props.room ? this.props.room.numberOfMaxGuest : null} guests  </span>
           <span>{this.props.room ? this.props.room.numberOfBedrooms : null} bedrooms  </span>  

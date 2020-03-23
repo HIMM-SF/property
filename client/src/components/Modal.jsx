@@ -16,16 +16,15 @@ const Wrapper = styled.div`
 
 const Box = styled.div`
     display: inline-block;
-    height: 500px;
+    height: auto;
     z-index: 1;
     position: relative;
     bottom: 0;
     margin: auto;
-    top: 100px;
+    top: 60px;
     left: 450px;
     right: 0px;  
     line-height: 1.375em;
-    height: 100%;
     color: #484848;
     width: 500px;
     box-shadow: 1px 1px 20px 1px rgba(15,15,15,0.2);
@@ -37,9 +36,25 @@ const Box = styled.div`
     }
 `;
 
-// const Title = styled.div`
-//    font-size: 16px;
-// `;
+const Title = styled.div`
+   font-size: 17px;
+   font-weight: 620; 
+   display: flex;
+   flex: 1;
+   Button {
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+   }
+   span {
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      color: #484848;;
+      display: flex;
+   }
+`;
 
 
 class Modal extends React.Component {
@@ -57,8 +72,10 @@ class Modal extends React.Component {
                         transform: this.props.show ? "translateY(0)" : "translateY(-100vh)",
                         opacity: this.props.show ? "1" : "0"}}>
                         <Box>
-                            <Button onClick={this.props.closeModal}> X </Button>
+                            
+                            <Button onClick={this.props.closeModal}><img style={{ maxWidth: "20px", maxHeight: "20px", borderRadius: "50%"}}src="cancel.jpg" /> </Button>
                             <div><h3>Amenities</h3></div>
+                            
                             <div><h4>Basic</h4></div>
                             <div>{this.props.room ? this.props.room.amen[0].title : null }</div>
                             <div>{this.props.room ? this.props.room.amen[1].title : null }</div>
