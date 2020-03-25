@@ -34,6 +34,11 @@ app.get('/api/rooms/', function(req, res) {
   })
 });
 
+// app.get('/api/rooms/:id', (req, res) => {
+//   const id = req.params;
+//   db.findBy
+// })
+
 // configure the keys for accessing AWS
 AWS.config.update({
   accessKeyId: `${config.AWS_ACCESS_KEY_ID}`,

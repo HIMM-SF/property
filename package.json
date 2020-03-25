@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/HIMM-SF/profile-listing#readme",
   "dependencies": {
+    "@styled-icons/evaicons-outline": "^10.2.0",
+    "@styled-icons/octicons": "^10.1.0",
     "aws-sdk": "^2.641.0",
     "axios": "^0.19.2",
     "cors": "^2.8.5",

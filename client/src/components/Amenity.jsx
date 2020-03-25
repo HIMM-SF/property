@@ -11,14 +11,18 @@ const Amen = styled.div`
 `;
 const Item = styled.div`
    display: flex;
+   flex: 2;
    padding: 10px 20px 0 0;
    font-weight: 400;
+  // border: 2px solid green;
 `;
 
 const ColumnFlex = styled.div`
    display: flex;
+   flex: 3;
+  // border: 2px solid orange;
    flex-direction: row;
-   justify-content: flex-start;
+   justify-content: space-between;
 `;
 
 class Amenity extends React.Component {

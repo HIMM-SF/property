@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import Button from "./Button";
 
 const Wrapper = styled.div`
+    z-index: 1;
     height: 100%;
     width: 100%;
     position: fixed;
     bottom: 0;
     top: 0;
-    z-index: 1;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -17,18 +17,24 @@ const Wrapper = styled.div`
 const Box = styled.div`
     display: inline-block;
     height: 580px;
-    z-index: 1;
-    position: relative;
-    bottom: 0;
-    margin: auto;
-    top: 50px;
-    left: 440px;
-    right: 0px;
     width: 520px;
-    border-radius: 27px;
-    box-shadow: 1px 1px 20px 1px rgba(15,15,15,0.2);
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    margin: auto;
+    top: 5%;
+    bottom: 5%;
+    left: 10%;
+    right: 10%;
+    border-radius: 10px;
     padding: 30px;
     background-color: white;
+    transition: 0.2 ease-in;
+    @media (max-width: 768px) {
+        width: 60%;
+        height: 85%;
+        }
     font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 `;
 
@@ -89,7 +95,7 @@ const Select = styled.select`
 `;
 
 const LoginTitle = styled.div`
-   font-size: 17px;
+   font-size: 19px;
    font-weight: 620; 
    display: flex;
    flex: 1;
@@ -103,7 +109,7 @@ const LoginTitle = styled.div`
       align-items: center;
       justify-content: center;
       flex: 1;
-      color: #484848;;
+      color: #484848;
       display: flex;
    }
 `;
@@ -117,7 +123,7 @@ const IconLetter = styled.div`
     cursor: pointer;
     &:hover{
         text-decoration: underline;
-    }
+      }
     }
     span {
     align-items: center;
@@ -138,14 +144,21 @@ const Mes = styled.h6`
 `;
 
 const PassInput = styled.input`
-   height: 20px;
-   padding-right: 10px;
+   height: 50px;
+   width: 50px;
+   margin-right:10px;
+   margin-left: 56px;
+   
+   flex-flow: column wrap;
+   @media (max-width: 900px) {
+    width: 50%;
+    height: 50%;
+    }
 `;
 
 const Enter = styled.button`
     display: block;
-    align-items: center;
-    width: 50%;
+    width: 100%;
     background-color: white;
     font-size: 16px;
     padding: 10px;
@@ -156,13 +169,14 @@ const Enter = styled.button`
     &:hover {
         border: 2px solid black;
       }
-   
 `;
+
 
 class Contact extends React.Component {
     constructor(props) {
         super(props);
-        this.state ={
+       
+        this.state = {
             page: 0,
             phoneNumber:'',
             password1: '',
@@ -176,6 +190,7 @@ class Contact extends React.Component {
         this.handleEnter = this.handleEnter.bind(this);
         this.handleInputEnter = this.handleInputEnter.bind(this);
     }
+    
     handleInputEnter(e) {
         if(e.Key === 'Enter') {
             const form = e.target.form;
@@ -191,7 +206,7 @@ class Contact extends React.Component {
         })
     }
     handleChange(e) {
-        e.preventDefault();
+       e.preventDefault();
         this.setState({
             [e.target.id] : e.target.value
         })
@@ -201,6 +216,7 @@ class Contact extends React.Component {
     }
     
     render() {
+        
         if (!this.props.logged) {
             return null;
         }
@@ -212,7 +228,7 @@ class Contact extends React.Component {
                 </div>
                 <Box>
                     <div>
-                         {this.state.page === 0    ?
+                         {this.state.page === 0   ?
                            <div>
                                <LoginTitle>
                                     <Button onClick={this.props.closeLogIn}> <img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="cancel.jpg" /></Button> 
@@ -226,7 +242,7 @@ class Contact extends React.Component {
                                                 <option>Ukraine (+380)</option>
                                                 <option>United Arab Emirates (+971)</option>
                                                 <option>United Kingdom (+44)</option>
-                                                <option >United States (+1)</option>
+                                                <option selected>United States (+1)</option>
                                                 <option>Uzbekistan (+998)</option>
                                                 <option>Vanuatu (+678)</option>
                                                 <option>Vatican City (+379)</option>
@@ -255,23 +271,21 @@ class Contact extends React.Component {
                          <div>
                              <LoginTitle>
                                 <Button onClick={this.props.closeLogIn}><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="cancel.jpg" /> </Button> 
-                                <span>Confirm your number</span><br></br>
+                                <span>Confirm your number</span><br></br><br></br>
                              </LoginTitle>
-                             <h5>Enter the code just sent to 4152617616:</h5><br></br>
-                            <form>
-                                <PassInput id="password1" onKeyPress={this.handleInputEnter} value={this.state.password1} onChange={this.handleChange} />
-                                <PassInput id="password2" onKeyPress={this.handleInputEnter} value={this.state.password2} onChange={this.handleChange} />
-                                <PassInput id="password3" onKeyPress={this.handleInputEnter} value={this.state.password3} onChange={this.handleChange}/>
-                                <PassInput id="password4" onKeyPress={this.handleInputEnter} value={this.state.password4} onChange={this.handleChange}/>
+                             <h5>Enter the code just sent to 4152617616:</h5>
+                            <form tabIndex="0">
+                                <PassInput id="password1" value={this.state.password1} onChange={this.handleChange} />
+                                <PassInput id="password2" value={this.state.password2} onChange={this.handleChange} />
+                                <PassInput id="password3" value={this.state.password3} onChange={this.handleChange}/>
+                                <PassInput id="password4" value={this.state.password4} onChange={this.handleChange}/>
                             </form> 
                              <br></br>
                              <Enter onClick={this.handleEnter}>Enter</Enter>
                              <br></br>
                              <div>Didn't get a text? Send again</div>
-                             <div>Call me instead</div>
                              <div>Log in another way</div>
                          </div>
-                           
                          }
                     </div>
                 </Box>
@@ -280,8 +294,6 @@ class Contact extends React.Component {
     }
     
 }
-
-
 
 export default Contact;
 

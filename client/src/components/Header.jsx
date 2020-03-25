@@ -2,117 +2,131 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
-    height: 700px;
-    position: relative;
+    //border: 2px solid red;
+    height: 60px;
     float: left;
-    top: 10px;
+    padding: 10px;
     left: 0px;
     right: 0px;
     width: 400px;
-
+    rgb(72, 72, 72);
     overflow-wrap:break-word;
+    @media (max-width: 700px) {
+      width: 100%;
+      height: 10%;
+      }
     div:nth-child(1) {
-      overflow-wrap: break-word;
       font-size: 32px;
       letter-spacing: wide;
-      font-weight: 620;
-      padding-top: 20pm;
-      padding-bottom: 10px;
-      rgb(72, 72, 72);
+      font-weight: 630;
+      padding-bottom: 15px;
     }
     div:nth-child(2) {
+      //border: 1px solid yellow;
       font-size: 17px;
       font-weight: 400;
-      padding-top: 8pm;
-      padding-bottom: 20px;
       line-height: 1.275em;
-      rgb(72, 72, 72);
     }
 `;
-
 const Spec = styled.div`
-   padding-bottom: 10px;
-   position: relative;
+   //border: 2px solid blue;
+   overflow-wrap:break-word;
    font-size: 17px;
    font-weight: 400;
+   width: 340px;
    line-height: 1.275em;
-   box-sizing:border-box;
-   -webkit-font-smoothing:antialiased;
-   text-size-adjust:100%;
+   //box-sizing:border-box;
+   @media (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    }
    span:nth-child(1) {
      padding-right: 15px;
+   //  border: 2px solid pink;
    }
    span:nth-child(2) {
     padding-right: 15px;
+   // border: 2px solid pink;
   }
   span:nth-child(3) {
     padding-right: 15px;
+  //  border: 2px solid pink;
   }
   span:nth-child(4) {
     padding-right: 15px;
+    //border: 2px solid pink;
   }
 `;
 
 const Wrapper = styled.div`
-   top: 1px;
-   bottom: 1px;
-
-   position: relative;
+   //border: 2px solid orange;
    float: right;
-   left: 25%;
    display: flex;
-   justify-content: flex-end;
    flex-direction: column;
-   
-   div:nth-child(1) {
-    flex: 5;
-    display: flex;
-    vertical-align: middle
-    flex-direction: column;
-    margin-top: 2px;
-
-  }
-  div:nth-child(2) {
-     flex: 5;
-     display: flex;
-     flex-direction: column;
-     text-align:center;
- }
+   @media (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    }
+    div:nth-child(1) {
+      flex: 1;
+      display: flex;
+      vertical-align: middle
+      flex-direction: column;
+      //border: 2px solid purple;
+    }
+    div:nth-child(2) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align:center;
+      //border: 2px solid green;
+    }
 `;
  
 const Front = styled.div`
-   width: 500px;
-   height: 100px;
+   display: flex;
+   width: 550px;
+   //border: 2px solid green;
+   height: 90px;
+   flex-direction: row;
+   justify-content: space-between;
+   @media (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    }
+`;
+
+const Item = styled.div`
+   display: flex;
+   flex-direction: column;
+   font-weight: 400;
 `;
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
       <Box>
         <Front>
+          <Item>
             <div>{this.props.room ? this.props.room.title : null}</div>
             <div><a href="#location">{this.props.room ? this.props.room.city : null}</a></div>
-            <Wrapper>
-                <div><img style={{ height: "70px", width: "70px" }} src="cutepig.png"/></div>
-                <div>{this.props.room ? this.props.room.userName : null}</div>
-            </Wrapper>
+          </Item>
+          <Wrapper>
+            <div><img style={{ height: "75px", width: "80px" }} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/IMG_3998.PNG"/></div>
+            <div>{this.props.room ? this.props.room.userName : null}</div>
+          </Wrapper>
         </Front>
         <Spec>
           <span>{this.props.room ? this.props.room.numberOfMaxGuest : null} guests  </span>
           <span>{this.props.room ? this.props.room.numberOfBedrooms : null} bedrooms  </span>  
           <span>{this.props.room ? this.props.room.numberOfBeds : null} beds  </span>
           <span>{this.props.room ? this.props.room.numberOfBaths : null} baths </span>
-
         </Spec>
 
       </Box>
-      
-        
-      
     )
   }
 }

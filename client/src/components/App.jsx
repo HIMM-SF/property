@@ -12,40 +12,78 @@ import Contact from './Contact.jsx';
 import Carousel from './Carousel.jsx';
 
 
-//const FullBackdrop = 
-
 const Wrapper = styled.div`
-  display: flex;
-  margin: 0px 200px 0px 190px;
-  overflow-wrap: break-word;
-  padding: 0px 22px 0px 24px;
-  line-height: 1.375em;
-  height: 100%;
-  
-  color: #484848;
-  letter-spacing: wide;
+    display: flex;
+    flex-flow: row wrap;
+    overflow-wrap: break-word;
+    margin: auto;
+    user-select: none;
+    width: 560px;
+    height: 1500px;
+    line-height: 1.375em;
+    letter-spacing: wide;
+    color: #484848;
+    @media (max-width: 700px) {
+      width: 90%;
+      height: 60%;
+    }
+    font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+
+  // display: flex;
+  // flex-flow: row wrap;
+  // flex-direction: column;
+  // margin: auto;
+  // user-select: none;
+  // //margin: 0px 200px 0px 190px;
+  // overflow-wrap: break-word;
+  // //padding: 0px 22px 0px 24px;
+  // line-height: 1.375em;
+  // height: 1100px;
+  // width: 1000px;
+  // color: #484848;
+  // letter-spacing: wide;
+  // @media (max-width: 800px) {
+  //    width: 100%;
+  //    height: 50%;
+  //   }
+  // @media (min-height: 300px) {
+  //   width: 80%;
+  //   height: 100%;
+  //   }
+
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 `;
 
 const MainBodyLeft = styled.div`
-  width: 600px;
-  
+  flex:1;
+  width: 560px;
+  height: 2000px;
+  @media (max-width: 700px) {
+    width: 90%;
+    height: 60%;
+    }
 `;
 
 const Heading = styled.div`
+  //border:2px solid yellow;
+  flex:2;
   display: flex;
-  height: 160px;
-  padding: 10px 10px 0px 0px;
-  position: relative;
-  border-bottom: 1px solid #e4e4e4;
-  
+  height: 150px;
+  border-bottom: 1px solid #e4e4e4;  
+  @media (max-width: 700px) {
+    width: 90%;
+    height: 60%;
+    }
 `;
 
 const Highlights = styled.div`
-  //height: auto;
-  position: relative;
-  padding: 10px 10px 0px 0px;
+  flex: 1;
+  height: auto;
   border-bottom: 1px solid #e4e4e4;
+  @media (max-width: 700px) {
+    width: 90%;
+    height: 60%;
+  }
 `;
 
 const ShowAll = styled.h3`
@@ -64,7 +102,7 @@ class App extends React.Component {
         this.state = {
             rooms: [],
             showModal: false,
-            logIn: false
+            logIn: false,
         };
         // bind here
         this.get = this.get.bind(this);
@@ -72,24 +110,21 @@ class App extends React.Component {
         this.closeModal = this.closeModal.bind(this);
         this.openLogIn = this.openLogIn.bind(this);
         this.closeLogIn = this.closeLogIn.bind(this);
-    };
 
+    };
+    componentDidMount() {
+      this.get();
+    };
     openModal() {
         this.setState({showModal: true})
     };
-
     closeModal() {
+
         this.setState({showModal: false})
-    }
-
-    componentDidMount() {
-        this.get();
     };
-
     openLogIn() {
         this.setState({logIn : true})
     };
-
     closeLogIn() {
         this.setState({logIn: false})
     };
@@ -107,33 +142,47 @@ class App extends React.Component {
           })
           .catch((err) => console.log(err));
     }
-
     render() {
-      const randomIndex = Math.floor(Math.random() * 15)
-      console.log(randomIndex)
+      const randomIndex = 3;
+      // const randomIndex = Math.floor(Math.random() * 15)
+      //console.log(randomIndex)
         return (
-            <div>
-                <Wrapper>
-                    <MainBodyLeft>
-                        <Heading>
-                        <Header room={this.state.rooms[randomIndex]} />
-                        {/* <Image /> */}
-                        </Heading>
-                        <Highlights>
-                        <Highlight room={this.state.rooms[randomIndex]} />
-                        </Highlights>
-                        <Body room={this.state.rooms[randomIndex]} />
-                        <ShowAll onClick={this.openLogIn}>Contact host</ShowAll>
-                        <Contact logged={this.state.logIn} closeLogIn={this.closeLogIn}>Contact host</Contact>
-                        <Amenity room={this.state.rooms[randomIndex]} />
-                        <ShowAll onClick={this.openModal}>Show All 10 Amenities</ShowAll>
-                        <Map />
-                    </MainBodyLeft>
-                </Wrapper> 
-                <Modal room={this.state.rooms[randomIndex]} show={this.state.showModal} closeModal={this.closeModal} />
-                
-                <Carousel />
-            </div>
+          <div>
+              <Wrapper>
+                  <MainBodyLeft>
+                    <Heading>
+                    <Header room={this.state.rooms[randomIndex]} />
+                    {/* <Image /> */}
+                    </Heading>
+                    <Highlights>
+                    <Highlight room={this.state.rooms[randomIndex]} />
+                    </Highlights>
+                    <Body room={this.state.rooms[randomIndex]} />
+                    
+                    <ShowAll onClick={this.openLogIn}>Contact host</ShowAll>
+                    
+                    <Contact logged={this.state.logIn} closeLogIn={this.closeLogIn}>Contact host</Contact>
+                    
+                    <Amenity room={this.state.rooms[randomIndex]} />
+                    {console.log('rfehere')}
+                    <ShowAll onClick={this.openModal}>Show All 10 Amenities</ShowAll>
+                    <Map />
+                    <h2>More homes you may like</h2>
+                  </MainBodyLeft>
+              {/* </Wrapper>  */}
+                <div>
+                  <Modal room={this.state.rooms[randomIndex]} show={this.state.showModal} closeModal={this.closeModal} />
+                </div>
+              </Wrapper> 
+              <div>
+                {/* <BtnContainer>
+                <button onClick={this.preRoom} disabled={this.state.shift === 0}><i className="fas fa-3x fa-chevron-left"></i></button>
+                {console.log(this.state.rooms[this.state.shift])}
+                <button onClick={this.nextRoom} disabled={this.state.shift === 4}>next</button>
+                </BtnContainer> */}
+                <Carousel room={this.state.rooms} curRoom={this.state.shift} nextRoom={this.nextRoom} preRoom={this.preRoom}/>
+              </div>
+          </div>
         )
     }
 }

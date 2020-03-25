@@ -5,6 +5,7 @@ const ReadHide = styled.h4`
   cursor: pointer;
   color: #008489;
   font-weight: 400;
+  text-space: wide;
   font-size: 16px;
 `;
 
@@ -25,7 +26,7 @@ class Body extends React.Component {
     readMore () {
         if (this.props.room) {
             var myText = this.props.room.listingBody;
-            //console.log(myText)
+            //console.log(myText[0])
         } else {
             return null;
         }
@@ -36,6 +37,7 @@ class Body extends React.Component {
         };
     };
     render() {
+        
         var expandedDiv = this.readMore();
         return (
             <div>
@@ -56,35 +58,3 @@ class Body extends React.Component {
 };
 
 export default Body;
-
-
-// class Body extends React.Component {
-//     constructor(props) {
-//         super(props);
-//     }
-//     render() {
-//         return (
-//             <div>
-//                 {this.props.room ? this.props.room.listingBody : null}
-//             </div>
-//         )
-//     }
-// }
-
-// export default Body;
-
-
-// render() {
-//     return (
-//       <div>
-//         {this.props.room ? this.props.room.listingBody : null &&  this.props.room.listingBody.length > 200 ?
-//           (
-//             <div>
-//               {`${text.substring(0, 200)}...`}<h5 >Read more</h5>
-//             </div>
-//           ) :
-//           <p>{this.props.room ? this.props.room.listingBody : null}</p>
-//         }
-//       </div>
-//     );
-// }

@@ -9,11 +9,13 @@ const Container = styled.div`
    flex-direction: column;
    padding: 10px 10px 0 0;
    margin-bottom: 33px;
+   
 `;
 
 const Item = styled.div`
    display: flex;
    padding: 10px 10px 0 0;
+  // border: 2px solid blue;
    div:nth-child(1) {
        flex: 0.7;
    }
@@ -21,14 +23,17 @@ const Item = styled.div`
         font-size: 17px;
         flex: 10;
         display: flex;
+        
         flex-direction: column;
         div:nth-child(1) {
             font-weight: 530;
             padding-bottom: 3px;
+            //border: 2px solid pink;
         }
         div:nth-child(2) {
             font-weight: 340;
             padding-bottom: 3px;
+            
         }
     }
 `;
