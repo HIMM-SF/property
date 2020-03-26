@@ -18,7 +18,9 @@ const Wrapper = styled.div`
     flex-flow: row wrap;
     overflow-wrap: break-word;
     margin: auto;
-    padding:80px 20px 20% 80%;
+    padding-bottom:15%;
+    padding-right: 40%;
+    padding-left: 5%;
     //position: relative;
     user-select: none;
     width: 560px;
@@ -58,7 +60,7 @@ const Wrapper = styled.div`
 `;
 
 const MainBodyLeft = styled.div`
-  border: 2px solid blue;
+  //border: 2px solid blue;
   //flex:1;
   width: 560px;
   //position: relative;
@@ -73,7 +75,8 @@ const Heading = styled.div`
   //border:2px solid yellow;
   flex:2;
   display: flex;
-  height: 150px;
+  position: relative;
+  height: auto;
   border-bottom: 1px solid #e4e4e4;  
   @media (max-width: 700px) {
     width: 90%;
@@ -84,6 +87,8 @@ const Heading = styled.div`
 const Highlights = styled.div`
   flex: 1;
   height: auto;
+  position: relative;
+  //border:2px solid green;
   border-bottom: 1px solid #e4e4e4;
   @media (max-width: 700px) {
     width: 90%;
@@ -100,6 +105,8 @@ const ShowAll = styled.h3`
     text-decoration: underline;
   }
 `;
+
+var randomIndex = Math.floor(Math.random() * 15);
 
 class App extends React.Component {
     constructor(props){
@@ -147,12 +154,15 @@ class App extends React.Component {
               console.log(randomIndex)
               console.log(result.data[randomIndex])
               console.log(result.data[randomIndex].highlight[1].characteristic)
+              
               this.setState({rooms: result.data});
           })
           .catch((err) => console.log(err));
     }
+
+    
     render() {
-      const randomIndex = 3;
+      //const randomIndex = 3;
       //console.log(randomIndex)
         return (
           <div>

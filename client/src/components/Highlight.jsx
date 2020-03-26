@@ -41,15 +41,15 @@ const Highlight = props => (
         <Item>
             <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/1.jpg"></img></div>
             <div>
-                <div>{props.room ? props.room.highlight[0].characteristic : null }</div>
-                <div>{props.room ? props.room.highlight[0].description : null }</div>
+                <div>{props.room ? props.room.highlight[1].characteristic : null }</div>
+                <div>{props.room ? props.room.highlight[1].description : null }</div>
             </div>
         </Item>
         <Item>
             <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/2.jpg"></img></div>
             <div>
-                <div>{props.room ? props.room.highlight[1].characteristic : null }</div>
-                <div>{props.room ? props.room.highlight[1].description : null }</div>
+                <div>{props.room ? props.room.highlight[0].characteristic : null }</div>
+                <div>{props.room ? props.room.highlight[0].description : null }</div>
             </div>
         </Item>
         <Item>

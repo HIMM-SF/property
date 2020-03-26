@@ -38,7 +38,7 @@ import {ArrowIosBackOutline}from '@styled-icons/evaicons-outline'
 // `;
 
 const Slider = styled.div`
-    // border: 3px solid red;
+     //border: 3px solid red;
     // display: flex;
     // flex-flow: row wrap;
     // //margin: auto;
@@ -47,12 +47,13 @@ const Slider = styled.div`
     // height: 310px;
     // //left: 20%;
     @media (max-width: 768px) {
-        width: 100%;
-        height: 50%;
+        width: 30%;
+        height: 100%;
       }
   
-   border: 3px solid red;
-   left: 30px;
+   //border: 3px solid red;
+   //left: 30px;
+   //left: -10px;
    top: 100px;
    font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
    font-size: 15px;
@@ -61,7 +62,7 @@ const Slider = styled.div`
    
    padding-bottom: 0px;
    font-weight: 320;
-   width: 880px;
+   width: 870px;
    text-space: wide;
    flex-wrap: nowrap;
    overflow: hidden;
@@ -73,10 +74,10 @@ const Wrapper = styled.div`
    height: 300px;
    //overflow: hidden;
    //margin-left: 10px;
-   margin-right: auto;
+   //margin-right: auto;
    transition: transform 170ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
    float:left;
-   width: 900px;
+   width: 890px;
    @media (max-width: 768px) {
     width: 100%;
     height: 50%;
@@ -90,12 +91,12 @@ const Wrapper = styled.div`
 `;
 
 const BtnContainer = styled.div`
-    width: 950px;
+    width: 910px;
     height: 270px;
-    //left: 120px;
-    border: 3px solid yellow; 
-    margin-left: auto;
-    margin-right: auto;
+    left: -20px;
+   // border: 3px solid yellow; 
+    //margin-left: auto;
+   // margin-right: auto;
     position: relative;
     display: flex;
     z-index: 0;
@@ -105,34 +106,34 @@ const BtnContainer = styled.div`
 
 const LeftBTN = styled.button`
     float: left;
-    left: 19px;
+    left: 3px;
     heigth: 60px;
-    width: 25px;
-    border: 2px solid green;
+    width: 18px;
+    //border: 2px solid green;
     outline: none;
     position: relative;
     background: transparent;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     color: rgb(73, 69, 72);
-    //border: none;
+    border: none;
     cursor: pointer;
 `;
 
 const RightBTN = styled.button`
     float: right;
     heigth: 60px;
-    width: 25px;
+    width: 20px;
     outline: none;
-    border: 2px solid pink;
+    //border: 2px solid pink;
     position: relative;
     background: transparent;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     color: rgb(73, 69, 72);
-    //border: none;
+    border: none;
     cursor: pointer;
 `;
 
@@ -140,9 +141,9 @@ const EachHome = styled.div`
    width: auto;
    text-align:left;
    img {
-      max-width: calc(97%);
+      max-width: calc(95%);
       display: block;
-      width: 97%;
+      width: 96%;
       height: 190px;
       padding-right: 12px;
      // border-radius: 8px;

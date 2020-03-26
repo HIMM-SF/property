@@ -41,7 +41,7 @@ class Body extends React.Component {
         var expandedDiv = this.readMore();
         return (
             <div>
-                <h3 id="body">The Space</h3>
+                <h2 id="body">The Space</h2>
                 { expandedDiv }
                 {this.state.expanded ? 
                 <div>

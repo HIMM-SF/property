@@ -32,7 +32,7 @@ class Amenity extends React.Component {
     render() {
         return (
             <Amen>
-                <div><h3>Amenities</h3></div>
+                <div><h2>Amenities</h2></div>
                 <ColumnFlex>
                     <Item>
                         <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/iron.jpg"></img>

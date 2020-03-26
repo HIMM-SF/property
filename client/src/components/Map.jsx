@@ -18,7 +18,7 @@ class Map extends React.Component {
     return (
       <div>
         <Mapdiv id="location"> 
-           <h3>The neighborhood</h3>
+           <h2>The neighborhood</h2>
             <img 
                 style={{ maxWidth: "500px", maxHeight: "450px", paddingBottom: "30px", imageOrientation: "from-image" }}
                 src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/Screen+Shot+2020-03-18+at+2.01.15+PM.jpg"

@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
-    //border: 2px solid red;
-    height: 60px;
+    //border: 2px solid pink;
+    height: auto;
     float: left;
-    padding: 10px;
+    padding: 4px;
     left: 0px;
     right: 0px;
     width: 400px;
@@ -16,7 +16,9 @@ const Box = styled.div`
       height: 10%;
       }
     div:nth-child(1) {
-      font-size: 32px;
+      font-size: 31px;
+      line-height: 1.05em;
+      letter-spacing:.7px;
       letter-spacing: wide;
       font-weight: 630;
       padding-bottom: 15px;
@@ -25,17 +27,18 @@ const Box = styled.div`
       //border: 1px solid yellow;
       font-size: 17px;
       font-weight: 400;
-      line-height: 1.275em;
+      line-height: 1.05em;
     }
 `;
 const Spec = styled.div`
    //border: 2px solid blue;
    overflow-wrap:break-word;
    font-size: 17px;
+   position: relative;
    font-weight: 400;
    width: 340px;
-   line-height: 1.275em;
-   //box-sizing:border-box;
+   line-height: 1.175em;
+   box-sizing:border-box;
    @media (max-width: 700px) {
     width: 100%;
     height: 100%;
@@ -86,8 +89,8 @@ const Wrapper = styled.div`
 const Front = styled.div`
    display: flex;
    width: 550px;
-   //border: 2px solid green;
-   height: 90px;
+   //border: 2px solid black;
+   height: auto;
    flex-direction: row;
    justify-content: space-between;
    @media (max-width: 700px) {
