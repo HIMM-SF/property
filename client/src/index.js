@@ -8,5 +8,5 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
      <App />
   </ThemeProvider>,
-  document.getElementById('app')
+  document.getElementById('property')
 );

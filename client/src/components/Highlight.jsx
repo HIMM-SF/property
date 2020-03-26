@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
-
 const Container = styled.div`
    position: relative;
    display: flex;
    flex-direction: column;
    padding: 10px 10px 0 0;
    margin-bottom: 33px;
-   
 `;
 
 const Item = styled.div`

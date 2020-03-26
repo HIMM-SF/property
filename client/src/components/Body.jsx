@@ -45,7 +45,7 @@ class Body extends React.Component {
                 { expandedDiv }
                 {this.state.expanded ? 
                 <div>
-                    <span><ReadHide onClick={this.handleClick} href="#body">Hide<img style={{bottom: "50px", top: "55px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src="up.jpg"/></ReadHide></span>
+                    <span><ReadHide onClick={this.handleClick} href="#body">Hide<img style={{bottom: "50px", top: "55px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src={require('../assets/up.jpg')}/></ReadHide></span>
                 </div>
                 :  
                 <div>

@@ -50,14 +50,15 @@ const Slider = styled.div`
         width: 100%;
         height: 50%;
       }
-
+  
    border: 3px solid red;
    left: 30px;
+   top: 100px;
    font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
    font-size: 15px;
    margin-top: 0px;
    padding-top: 0px;
-   position: absolute;
+   
    padding-bottom: 0px;
    font-weight: 320;
    width: 880px;
@@ -69,14 +70,13 @@ const Slider = styled.div`
 
 const Wrapper = styled.div`
    display: flex;
-   height: 290px;
+   height: 300px;
    //overflow: hidden;
-   position: relative;
-   margin-left: 150px;
+   //margin-left: 10px;
    margin-right: auto;
    transition: transform 170ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
    float:left;
-   width: 1000px;
+   width: 900px;
    @media (max-width: 768px) {
     width: 100%;
     height: 50%;
@@ -90,9 +90,9 @@ const Wrapper = styled.div`
 `;
 
 const BtnContainer = styled.div`
-    width: 970px;
-    height: 245px;
-    left: 120px;
+    width: 950px;
+    height: 270px;
+    //left: 120px;
     border: 3px solid yellow; 
     margin-left: auto;
     margin-right: auto;
@@ -107,7 +107,7 @@ const LeftBTN = styled.button`
     float: left;
     left: 19px;
     heigth: 60px;
-    width: 40px;
+    width: 25px;
     border: 2px solid green;
     outline: none;
     position: relative;
@@ -123,7 +123,7 @@ const LeftBTN = styled.button`
 const RightBTN = styled.button`
     float: right;
     heigth: 60px;
-    width: 40px;
+    width: 25px;
     outline: none;
     border: 2px solid pink;
     position: relative;
@@ -139,7 +139,6 @@ const RightBTN = styled.button`
 const EachHome = styled.div`
    width: auto;
    text-align:left;
-
    img {
       max-width: calc(97%);
       display: block;

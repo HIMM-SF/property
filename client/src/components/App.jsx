@@ -14,12 +14,15 @@ import Carousel from './Carousel.jsx';
 
 const Wrapper = styled.div`
     display: flex;
+    border:2px solid red;
     flex-flow: row wrap;
     overflow-wrap: break-word;
-    margin: auto;
+    margin-right: 20%;
+    margin-left:20%;
+    position: relative;
     user-select: none;
     width: 560px;
-    height: 1500px;
+    height: 1100px;
     line-height: 1.375em;
     letter-spacing: wide;
     color: #484848;
@@ -55,9 +58,11 @@ const Wrapper = styled.div`
 `;
 
 const MainBodyLeft = styled.div`
-  flex:1;
+  border: 2px solid blue;
+  //flex:1;
   width: 560px;
-  height: 2000px;
+  position: relative;
+  height: auto;
   @media (max-width: 700px) {
     width: 90%;
     height: 60%;
@@ -138,13 +143,16 @@ class App extends React.Component {
               //console.log(result.data[0])
 
               //console.log(result.data[13].highlight[0])
+              const randomIndex = Math.floor(Math.random() * 15)
+              console.log(randomIndex)
+              console.log(result.data[randomIndex])
+              console.log(result.data[randomIndex].highlight[1].characteristic)
               this.setState({rooms: result.data});
           })
           .catch((err) => console.log(err));
     }
     render() {
       const randomIndex = 3;
-      // const randomIndex = Math.floor(Math.random() * 15)
       //console.log(randomIndex)
         return (
           <div>
@@ -168,6 +176,7 @@ class App extends React.Component {
                     <ShowAll onClick={this.openModal}>Show All 10 Amenities</ShowAll>
                     <Map />
                     <h2>More homes you may like</h2>
+                    <Carousel room={this.state.rooms} curRoom={this.state.shift} nextRoom={this.nextRoom} preRoom={this.preRoom}/>
                   </MainBodyLeft>
               {/* </Wrapper>  */}
                 <div>
@@ -180,8 +189,9 @@ class App extends React.Component {
                 {console.log(this.state.rooms[this.state.shift])}
                 <button onClick={this.nextRoom} disabled={this.state.shift === 4}>next</button>
                 </BtnContainer> */}
-                <Carousel room={this.state.rooms} curRoom={this.state.shift} nextRoom={this.nextRoom} preRoom={this.preRoom}/>
+                {/* <Carousel room={this.state.rooms} curRoom={this.state.shift} nextRoom={this.nextRoom} preRoom={this.preRoom}/> */}
               </div>
+              
           </div>
         )
     }

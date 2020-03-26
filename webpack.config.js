@@ -17,18 +17,23 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
+
         use: {
           loader: "babel-loader",
+
           options : {
               presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
       },
-
       {
         test: /\.css$/i,
-        use: ['css-loader'],
+        use: ['css-loader', 'style-loader'],
       },
-    ]
+      {
+         test: /\.(png|svg|jpg|gif)$/,
+         use: ['file-loader'],
+      },
+    ],
   }
 };
