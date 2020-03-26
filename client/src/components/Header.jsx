@@ -36,6 +36,7 @@ const Spec = styled.div`
    font-size: 17px;
    position: relative;
    font-weight: 400;
+   padding-bottom: 2%;
    width: 340px;
    line-height: 1.175em;
    box-sizing:border-box;

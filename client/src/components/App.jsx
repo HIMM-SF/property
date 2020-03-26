@@ -14,7 +14,7 @@ import Carousel from './Carousel.jsx';
 
 const Wrapper = styled.div`
     display: flex;
-    border:2px solid red;
+    //border:2px solid red;
     flex-flow: row wrap;
     overflow-wrap: break-word;
     margin: auto;
