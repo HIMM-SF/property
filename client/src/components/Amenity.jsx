@@ -35,21 +35,21 @@ class Amenity extends React.Component {
                 <div><h3>Amenities</h3></div>
                 <ColumnFlex>
                     <Item>
-                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="iron.jpg"></img>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/iron.jpg"></img>
                         <div>{this.props.room ? this.props.room.amen[0].title : null }</div>
                     </Item>
                     <Item>
-                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="parking.jpg"></img>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/parking.jpg"></img>
                         <div>{this.props.room ? this.props.room.amen[1].title : null }</div>
                     </Item>
                 </ColumnFlex>
                 <ColumnFlex>
                     <Item>
-                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="wifi.jpg"></img>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/wifi.jpg"></img>
                         <div>{this.props.room ? this.props.room.amen[2].title : null }</div>
                     </Item>
                     <Item>
-                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="dinning.jpg"></img>
+                        <img style={{ maxWidth: "30px", maxHeight: "30px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/dinning.jpg"></img>
                         <div>{this.props.room ? this.props.room.amen[3].title : null }</div>
                     </Item>
                 </ColumnFlex>
