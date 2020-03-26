@@ -231,7 +231,7 @@ class Contact extends React.Component {
                          {this.state.page === 0   ?
                            <div>
                                <LoginTitle>
-                                    <Button onClick={this.props.closeLogIn}> <img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="cancel.jpg" /></Button> 
+                                    <Button onClick={this.props.closeLogIn}> <img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/cancel.jpg" /></Button> 
                                     <span>Log In</span>
                                </LoginTitle>
                                     <form>
@@ -259,18 +259,18 @@ class Contact extends React.Component {
                                 <ContactButton onClick={this.handleContinue}> Continue </ContactButton>
                                 <br></br>
                                 <Divider>or</Divider>
-                                <BTN><IconLetter><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="e.jpg" /><span>Continue with email</span></IconLetter> </BTN>
+                                <BTN><IconLetter><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/e.jpg" /><span>Continue with email</span></IconLetter> </BTN>
                                 <br></br>
-                                <BTN><IconLetter><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="f.jpg" /><span>Continue with Facebook</span></IconLetter></BTN>
+                                <BTN><IconLetter><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/f.jpg" /><span>Continue with Facebook</span></IconLetter></BTN>
                                 <br></br>
-                                <BTN><IconLetter><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="g.jpg" /><span>Continue with Google</span></IconLetter></BTN>
+                                <BTN><IconLetter><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/g.jpg" /><span>Continue with Google</span></IconLetter></BTN>
                                 <br></br>
                                 <h5>Don't have an account? <a>Sign up</a></h5><br></br>
                            </div>
                          : 
                          <div>
                              <LoginTitle>
-                                <Button onClick={this.props.closeLogIn}><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="cancel.jpg" /> </Button> 
+                                <Button onClick={this.props.closeLogIn}><img style={{ maxWidth: "30px", maxHeight: "30px", borderRadius: "50%"}}src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/cancel.jpg" /> </Button> 
                                 <span>Confirm your number</span><br></br><br></br>
                              </LoginTitle>
                              <h5>Enter the code just sent to 4152617616:</h5>

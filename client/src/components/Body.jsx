@@ -45,11 +45,11 @@ class Body extends React.Component {
                 { expandedDiv }
                 {this.state.expanded ? 
                 <div>
-                    <span><ReadHide onClick={this.handleClick} href="#body">Hide<img style={{bottom: "50px", top: "55px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src={require('../assets/up.jpg')}/></ReadHide></span>
+                    <span><ReadHide onClick={this.handleClick} href="#body">Hide<img style={{bottom: "50px", top: "55px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/36126f22db95195b39b21d7462a03faf.jpg"/></ReadHide></span>
                 </div>
                 :  
                 <div>
-                    <span><ReadHide onClick={this.handleClick}>Read more about the space<img style={{ top: "75px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src="down.jpg"/></ReadHide></span>
+                    <span><ReadHide onClick={this.handleClick}>Read more about the space<img style={{ top: "75px", marginLeft: "15px", maxWidth: "25px", maxHeight: "25px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/down.jpg"/></ReadHide></span>
                 </div>
                 }
            </div>

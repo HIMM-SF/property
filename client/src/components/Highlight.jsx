@@ -39,28 +39,28 @@ const Item = styled.div`
 const Highlight = props => (
     <Container>
         <Item>
-            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="1.jpg"></img></div>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/1.jpg"></img></div>
             <div>
                 <div>{props.room ? props.room.highlight[0].characteristic : null }</div>
                 <div>{props.room ? props.room.highlight[0].description : null }</div>
             </div>
         </Item>
         <Item>
-            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="2.jpg"></img></div>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/2.jpg"></img></div>
             <div>
                 <div>{props.room ? props.room.highlight[1].characteristic : null }</div>
                 <div>{props.room ? props.room.highlight[1].description : null }</div>
             </div>
         </Item>
         <Item>
-            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="3.jpg"></img></div>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/3.jpg"></img></div>
             <div>
                 <div>{props.room ? props.room.highlight[2].characteristic : null }</div>
                 <div>{props.room ? props.room.highlight[2].description : null }</div>
             </div>
         </Item>
         <Item>
-            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="4.jpg"></img></div>
+            <div><img style={{ maxWidth: "20px", maxHeight: "20px"}} src="https://userimagexxia10296.s3.us-east-2.amazonaws.com/4.jpg"></img></div>
             <div>
                 <div>{props.room ? props.room.highlight[3].characteristic : null }</div>
                 <div>{props.room ? props.room.highlight[3].description : null }</div>

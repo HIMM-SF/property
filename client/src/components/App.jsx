@@ -17,9 +17,9 @@ const Wrapper = styled.div`
     border:2px solid red;
     flex-flow: row wrap;
     overflow-wrap: break-word;
-    margin-right: 20%;
-    margin-left:20%;
-    position: relative;
+    margin: auto;
+    padding:80px 20px 20% 80%;
+    //position: relative;
     user-select: none;
     width: 560px;
     height: 1100px;
@@ -61,7 +61,7 @@ const MainBodyLeft = styled.div`
   border: 2px solid blue;
   //flex:1;
   width: 560px;
-  position: relative;
+  //position: relative;
   height: auto;
   @media (max-width: 700px) {
     width: 90%;
