@@ -1,0 +1,17 @@
+1. containirize database 
+2. make containerize contain with mock data (disable database connect, just fake data)
+3. seed data to container(seedDB script --> scheme --> connection to container)
+4. connect node server to container database
+3.
+
+
+aws: 
+breaking problems into smaller pieces ;
+ec2 instance
+install GIT
+install node nvm
+pull repository from git onto the instance 
+run with mock data 
+install the instance mongo
+seed mongo run webpack once without -w 
+start server

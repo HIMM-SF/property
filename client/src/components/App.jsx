@@ -107,6 +107,7 @@ const ShowAll = styled.h3`
 `;
 
 var randomIndex = Math.floor(Math.random() * 15);
+//var randomIndex = 0;
 
 class App extends React.Component {
     constructor(props){
@@ -150,10 +151,10 @@ class App extends React.Component {
               //console.log(result.data[0])
 
               //console.log(result.data[13].highlight[0])
-              const randomIndex = Math.floor(Math.random() * 15)
-              console.log(randomIndex)
-              console.log(result.data[randomIndex])
-              console.log(result.data[randomIndex].highlight[1].characteristic)
+              //const randomIndex = Math.floor(Math.random() * 15)
+             // console.log('lenght from app', result.data.length)
+             // console.log(result.data[randomIndex])
+             // console.log(result.data[randomIndex].highlight[1].characteristic)
               
               this.setState({rooms: result.data});
           })
@@ -182,7 +183,7 @@ class App extends React.Component {
                     <Contact logged={this.state.logIn} closeLogIn={this.closeLogIn}>Contact host</Contact>
                     
                     <Amenity room={this.state.rooms[randomIndex]} />
-                    {console.log('rfehere')}
+                    {/* //{console.log('rfehere')} */}
                     <ShowAll onClick={this.openModal}>Show All 10 Amenities</ShowAll>
                     <Map />
                     <h2>More homes you may like</h2>

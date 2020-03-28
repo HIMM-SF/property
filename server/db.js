@@ -1,7 +1,7 @@
 // Mongoose connection
 const mongoose = require('mongoose');
 
-const db = 'mongodb://localhost/rooms';
+const db = 'mongodb://mongo:27017/Profiles' ;
 
 mongoose.connect(db, {
   useNewUrlParser: true,

@@ -7,7 +7,8 @@
     "test": "jest",
     "seedDB": "node server/seedDB.js",
     "start": "node server/index.js",
-    "react-dev": "webpack -w"
+    "react-dev": "webpack -w",
+    "docker" : "sleep 20 && npm run seedDB && npm run start"
   },
   "repository": {
     "type": "git",

@@ -148,7 +148,7 @@ const PassInput = styled.input`
    width: 50px;
    margin-right:10px;
    margin-left: 56px;
-   
+   text-align: center;
    flex-flow: column wrap;
    @media (max-width: 900px) {
     width: 50%;
@@ -275,7 +275,7 @@ class Contact extends React.Component {
                              </LoginTitle>
                              <h5>Enter the code just sent to 4152617616:</h5>
                             <form tabIndex="0">
-                                <PassInput id="password1" value={this.state.password1} onChange={this.handleChange} />
+                                <PassInput id="password1" style={text-align:center} value={this.state.password1} onChange={this.handleChange} />
                                 <PassInput id="password2" value={this.state.password2} onChange={this.handleChange} />
                                 <PassInput id="password3" value={this.state.password3} onChange={this.handleChange}/>
                                 <PassInput id="password4" value={this.state.password4} onChange={this.handleChange}/>
