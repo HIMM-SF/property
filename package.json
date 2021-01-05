@@ -25,7 +25,7 @@
     "@styled-icons/evaicons-outline": "^10.2.0",
     "@styled-icons/octicons": "^10.1.0",
     "aws-sdk": "^2.641.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "css-loader": "^3.4.2",
     "express": "^4.17.1",
